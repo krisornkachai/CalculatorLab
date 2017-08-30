@@ -19,6 +19,7 @@ namespace CPE200Lab1
         private string firstOperand;
         private string operate;
 
+        CalculatorEngine calculate = new CalculatorEngine();
         private void resetAll()
         {
             lblDisplay.Text = "0";
@@ -27,7 +28,7 @@ namespace CPE200Lab1
             isAfterOperater = false;
             isAfterEqual = false;
         }
-
+        /*
         private string calculate(string operate, string firstOperand, string secondOperand, int maxOutputSize = 8)
         {
             switch(operate)
@@ -66,7 +67,7 @@ namespace CPE200Lab1
             }
             return "E";
         }
-
+        */
         public MainForm()
         {
             InitializeComponent();
@@ -136,7 +137,7 @@ namespace CPE200Lab1
                 return;
             }
             string secondOperand = lblDisplay.Text;
-            string result = calculate(operate, firstOperand, secondOperand);
+            string result = calculate.calculate(operate, firstOperand, secondOperand);
             if (result is "E" || result.Length > 8)
             {
                 lblDisplay.Text = "Error";
@@ -226,6 +227,16 @@ namespace CPE200Lab1
                     lblDisplay.Text = "0";
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDisplay_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
