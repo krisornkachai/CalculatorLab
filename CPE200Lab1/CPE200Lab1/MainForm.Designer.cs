@@ -308,7 +308,6 @@
             this.lblDisplay.TabIndex = 20;
             this.lblDisplay.Text = "0";
             this.lblDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblDisplay.Click += new System.EventHandler(this.lblDisplay_Click);
             // 
             // button1
             // 
@@ -320,6 +319,7 @@
             this.button1.TabIndex = 24;
             this.button1.Text = "MR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.memCal_Click);
             // 
             // button2
             // 
@@ -331,7 +331,7 @@
             this.button2.TabIndex = 23;
             this.button2.Text = "MC";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.memCal_Click);
             // 
             // button3
             // 
@@ -343,6 +343,7 @@
             this.button3.TabIndex = 22;
             this.button3.Text = "M+";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.memCal_Click);
             // 
             // button4
             // 
@@ -354,6 +355,8 @@
             this.button4.TabIndex = 21;
             this.button4.Text = "M-";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.memCal_Click);
+
             // 
             // btnsqrt
             // 
@@ -366,8 +369,6 @@
             this.btnsqrt.Text = "√";
             this.btnsqrt.UseVisualStyleBackColor = true;
             this.btnsqrt.Click += new System.EventHandler(this.btnOperator_Click);
-
-      
             // 
             // MainForm
             // 

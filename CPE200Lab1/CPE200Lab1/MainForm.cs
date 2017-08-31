@@ -18,6 +18,7 @@ namespace CPE200Lab1
         private bool isAfterEqual;
         private string firstOperand;
         public string operate;
+        public string mem = "0", newMem = "0";
 
         CalculatorEngine calculate = new CalculatorEngine();
         private void resetAll()
@@ -243,19 +244,30 @@ namespace CPE200Lab1
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void memCal_Click(object sender, EventArgs e)
         {
+            operate = ((Button)sender).Text;
+            switch (operate)
+            {
+                case "MC":
+                    mem = "0";
+                    lblDisplay.Text = mem;
 
+                    break;
+                case "MR":
+                    lblDisplay.Text = mem;
+                    break;
+                case "M+":
+                    mem= ((Convert.ToDouble(lblDisplay.Text))+ (Convert.ToDouble(mem))).ToString();
+                    break;
+                case "M-":
+                    mem = ((Convert.ToDouble(mem))-(Convert.ToDouble(lblDisplay.Text)) ).ToString();
+                    break;
+         
+
+            }
         }
 
-        private void lblDisplay_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnsqrt_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
-}
+}          
