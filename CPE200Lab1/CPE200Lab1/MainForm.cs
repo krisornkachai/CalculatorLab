@@ -17,7 +17,7 @@ namespace CPE200Lab1
         private bool isAfterOperater;
         private bool isAfterEqual;
         private string firstOperand;
-        private string operate;
+        public string operate;
 
         CalculatorEngine calculate = new CalculatorEngine();
         private void resetAll()
@@ -118,6 +118,10 @@ namespace CPE200Lab1
                 case "+":
                 case "-":
                 case "X":
+                case "√":
+                    firstOperand = lblDisplay.Text;
+                    isAfterOperater = true;
+                    break;
                 case "÷":
                     firstOperand = lblDisplay.Text;
                     isAfterOperater = true;
@@ -142,14 +146,19 @@ namespace CPE200Lab1
             }
             string secondOperand = lblDisplay.Text;
             string result = calculate.calculate(operate, firstOperand, secondOperand);
-            if (result is "E" || result.Length > 8)
+      /*      if (operate == "√")
             {
+                result= (Math.Sqrt(Convert.ToDouble(secondOperand))).ToString();
+
+            }*/
+            if (result is "E" || result.Length > 8)
+           {
                 lblDisplay.Text = "Error";
-            }
-            else
+           }
+           else
             {
                 lblDisplay.Text = result;
-            }
+           }
             isAfterEqual = true;
         }
 
@@ -240,6 +249,11 @@ namespace CPE200Lab1
         }
 
         private void lblDisplay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsqrt_Click(object sender, EventArgs e)
         {
 
         }
