@@ -119,6 +119,10 @@ namespace CPE200Lab1
                 case "+":
                 case "-":
                 case "X":
+                case "1/x":
+                    firstOperand = lblDisplay.Text;
+                    isAfterOperater = true;
+                    break;
                 case "√":
                     firstOperand = lblDisplay.Text;
                     isAfterOperater = true;
@@ -243,6 +247,8 @@ namespace CPE200Lab1
                 }
             }
         }
+
+        
 
         private void memCal_Click(object sender, EventArgs e)
         {

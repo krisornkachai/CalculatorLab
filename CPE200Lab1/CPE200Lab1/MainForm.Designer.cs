@@ -54,6 +54,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnsqrt = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn7
@@ -251,10 +252,10 @@
             // btnDivide
             // 
             this.btnDivide.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDivide.Location = new System.Drawing.Point(389, 261);
+            this.btnDivide.Location = new System.Drawing.Point(520, 261);
             this.btnDivide.Margin = new System.Windows.Forms.Padding(4);
             this.btnDivide.Name = "btnDivide";
-            this.btnDivide.Size = new System.Drawing.Size(248, 79);
+            this.btnDivide.Size = new System.Drawing.Size(117, 79);
             this.btnDivide.TabIndex = 16;
             this.btnDivide.Text = "÷";
             this.btnDivide.UseVisualStyleBackColor = true;
@@ -356,12 +357,11 @@
             this.button4.Text = "M-";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.memCal_Click);
-
             // 
             // btnsqrt
             // 
             this.btnsqrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsqrt.Location = new System.Drawing.Point(514, 174);
+            this.btnsqrt.Location = new System.Drawing.Point(520, 174);
             this.btnsqrt.Margin = new System.Windows.Forms.Padding(4);
             this.btnsqrt.Name = "btnsqrt";
             this.btnsqrt.Size = new System.Drawing.Size(117, 79);
@@ -370,11 +370,24 @@
             this.btnsqrt.UseVisualStyleBackColor = true;
             this.btnsqrt.Click += new System.EventHandler(this.btnOperator_Click);
             // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(389, 261);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(117, 79);
+            this.button5.TabIndex = 32;
+            this.button5.Text = "1/x";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.btnOperator_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(650, 698);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.btnsqrt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
@@ -436,6 +449,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnsqrt;
+        private System.Windows.Forms.Button button5;
     }
 }
 
