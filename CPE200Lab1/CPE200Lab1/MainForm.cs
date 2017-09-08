@@ -105,7 +105,7 @@ namespace CPE200Lab1
 
         private void btnOperator_Click(object sender, EventArgs e)
         {
-            if (lblDisplay.Text is "Error")
+             if (lblDisplay.Text is "Error")
             {
                 return;
             }
